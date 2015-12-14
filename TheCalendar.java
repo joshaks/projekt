@@ -251,9 +251,8 @@ private Scanner scanna = new Scanner(System.in);
 		int startDay = Integer.valueOf(startArrayS[2]);
 		
 		System.out.println("Vilket datum vill du sluta på? (YYYY-MM-DD):");
-		String endString = dateControll(); //slutdag
+		String endString = dateControll();
 		Date endDate = Date.valueOf(endString);
-
 		
 		long startTime = startDate.getTime();
 		long slutTime = endDate.getTime();
@@ -271,7 +270,7 @@ private Scanner scanna = new Scanner(System.in);
 						startMonth=1;	
 						startYear++;
 					}
-			}//end if
+			}//end if       
 
 			//the int value of for example "08" is "8", 
 			//therefore we need to correct this error to match the list
@@ -293,33 +292,6 @@ private Scanner scanna = new Scanner(System.in);
 			findActivity(year+"-"+month+"-"+day);
 			countedDays++;
 		  }//end for-loop
-	/*
-	 * for(int date=startDay; timesAdded<=timesRepeat;date=date+every){
-			
-
-			
-
-			String month ="", day="";
-			if(startMonth<10){
-				month = "0"+startMonth;
-			}else{month = String.valueOf(startMonth);}
-			if(date<10){
-				 day = "0"+date; 
-			}else{day=String.valueOf(date);}
-			
-
-			
-			//add the things to the calendar
-			theCalendar.add(startYear+"-"+month+"-"+day+"_"+startTime+"_"+endTime+"_"+activity);
-			
-			timesAdded++;//every time we go to the loop; add ''times added''
-		}//end for loop
-	 * 
-	 * 
-	 */
-	
-	
-	
 	}//END SHOW DATES
 	
 	
